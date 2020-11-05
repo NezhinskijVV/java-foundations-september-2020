@@ -12,7 +12,10 @@ public class Jungle {
         System.out.println("В наших джунглях есть: " + scar.getName());
         System.out.println("Количество лап " + scar.getName()
                 + ":" + scar.getPawsCount());
-
-
     }
 }
+
+//HW
+//Get + Set на все поля
+//Конструкторы от разного числа аргументов
+//Внутри terminal или cmd с помощью команд git залит на сервер файл TestGit.java
