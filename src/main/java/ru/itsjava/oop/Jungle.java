@@ -12,6 +12,14 @@ public class Jungle {
         System.out.println("В наших джунглях есть: " + scar.getName());
         System.out.println("Количество лап " + scar.getName()
                 + ":" + scar.getPawsCount());
+
+        Cat marusya = new BritishCat();
+//        marusya.sayMeow();
+//
+//        marusya.sayMrr();
+
+        System.out.println("marusya.getBreed() = " + marusya.getBreed());
+        marusya.sayMeow();
     }
 }
 
