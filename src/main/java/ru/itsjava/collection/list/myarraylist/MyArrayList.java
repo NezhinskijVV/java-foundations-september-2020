@@ -19,7 +19,7 @@ public class MyArrayList {
     }
 
     public boolean contains(Object o) {
-        return false;
+        return indexOf(o) != -1;
     }
 
     public Object[] toArray() {
@@ -37,15 +37,40 @@ public class MyArrayList {
     }
 
     public boolean remove(Object o) {
-        return false;
+        Object[] resultArray = new Object[array.length];
+        int removeIndex = realSize;
+        for (int i = 0; i < realSize; i++) {
+            if (array[i].equals(o)) {
+                removeIndex = i;
+                break;
+            }
+            resultArray[i] = array[i];
+        }
+
+        if (removeIndex == realSize) return false;
+
+        for (int i = removeIndex; i < realSize; i++) {
+            resultArray[i] = array[i + 1];
+        }
+        array = resultArray;
+        realSize--;
+        return true;
     }
 
     public void clear() {
 
     }
 
+    private void checkIndex(int index) {
+        if ((index < 0) || (index > realSize)) {
+            throw new IndexOutOfBoundsException("Index: " + index +
+                    " out of size " + realSize);
+        }
+    }
+
     public Object get(int index) {
-        return null;
+        checkIndex(index);
+        return array[index];
     }
 
     public Object set(int index, Object element) {
