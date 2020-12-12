@@ -67,4 +67,17 @@ public class MyArrayList {
     public int lastIndexOf(Object o) {
         return 0;
     }
+
+
+    //MyArrayList{elem1, elem2 , elem3 ... }
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder("MyArrayList{");
+        for (int i = 0; i < realSize; i++) {
+            result.append(array[i]).append(" ");
+        }
+        result.append('}');
+
+        return result.toString();
+    }
 }

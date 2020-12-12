@@ -8,5 +8,7 @@ public class MyArrayListPractice {
 
         myArrayList.add("str 1");
 
+        System.out.println(myArrayList);
+
     }
 }
