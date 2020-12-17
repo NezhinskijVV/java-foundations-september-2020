@@ -1,6 +1,7 @@
 package ru.itsjava.collection.list.practice;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ListPractice {
@@ -48,8 +49,14 @@ public class ListPractice {
 
 //        stringList.add(new Object());
 
+        List<String> arrayList = new ArrayList<>();
+        List<String> linkedList = new LinkedList<>();
 
+        arrayList.add("A1");
+        linkedList.add("L1");
 
+        System.out.println(arrayList.get(0));
+        System.out.println(linkedList.get(0));
     }
 }
 //Списки:
