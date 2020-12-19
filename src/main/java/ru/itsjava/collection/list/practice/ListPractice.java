@@ -57,6 +57,10 @@ public class ListPractice {
 
         System.out.println(arrayList.get(0));
         System.out.println(linkedList.get(0));
+
+
+
+
     }
 }
 //Списки:

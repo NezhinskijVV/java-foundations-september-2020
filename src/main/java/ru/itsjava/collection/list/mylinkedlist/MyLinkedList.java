@@ -15,8 +15,16 @@ public class MyLinkedList {
     }
 
     public boolean contains(Object o) {
+        Node currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.getValue().equals(o)) {
+                return true;
+            }
+            currentNode = currentNode.getNext();
+        }
         return false;
     }
+
 
     public boolean add(Object o) {
         Node node = new Node(o, null);
@@ -75,7 +83,7 @@ public class MyLinkedList {
         Node curNode = head.getNext();
 
         int curIndex = 1;
-        while (curIndex != index){
+        while (curIndex != index) {
             prevNode = prevNode.getNext();
             curNode = curNode.getNext();
             curIndex++;
@@ -101,7 +109,7 @@ public class MyLinkedList {
         StringBuilder stringBuilder = new StringBuilder("LinkedList{ ");
 
         Node curNode = head;
-        while (curNode != null){
+        while (curNode != null) {
             stringBuilder.append(curNode.getValue()).append(" ");
             curNode = curNode.getNext();
         }

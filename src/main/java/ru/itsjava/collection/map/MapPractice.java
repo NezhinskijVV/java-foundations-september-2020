@@ -42,5 +42,9 @@ public class MapPractice {
         }
 
 
+        men.put(null, "Ola");
+
+        System.out.println("men.get(null) = " + men.get(null));
+
     }
 }
